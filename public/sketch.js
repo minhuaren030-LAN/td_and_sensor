@@ -61,3 +61,19 @@ function draw() {
         display.innerText = "MODE 3";
     }
 }
+function draw() {
+    if (!sensorPermission) return;
+
+    // ... 你原本的数据捕捉和发送代码 ...
+
+    // --- 新增：在手机屏幕上显示调试信息 ---
+    push();
+    fill(255);
+    noStroke();
+    textSize(20);
+    textAlign(LEFT);
+    // 在屏幕左上角印出原始旋转值和计算后的 moveX
+    text("Raw RotY: " + floor(rotationY), 20, height - 100);
+    text("Calculated moveX: " + nf(moveX, 1, 2), 20, height - 70);
+    pop();
+}
