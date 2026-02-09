@@ -35,7 +35,7 @@ function draw() {
     // 直接染成黄色
     background(255, 215, 0); 
     const txt = document.getElementById('mode-display');
-    if(txt) txt.innerText = "MODE 2";
+    if(txt) txt.innerText = "MODE";
 
     // 依然保留一个数字，让你知道数据在发
     fill(255);
